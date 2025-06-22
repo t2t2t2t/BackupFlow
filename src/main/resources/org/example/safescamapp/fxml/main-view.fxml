@@ -1,0 +1,216 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ProgressBar?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefWidth="600.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.safescamapp.controllers.MainController">
+   <children>
+      <BorderPane prefHeight="400.0" prefWidth="600.0">
+         <center>
+            <VBox alignment="CENTER" prefHeight="384.0" prefWidth="600.0" spacing="2.0">
+                <padding>
+                    <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                </padding>
+               <children>
+                  <HBox alignment="CENTER_LEFT" prefHeight="60.0" prefWidth="460.0" spacing="5.0">
+                     <children>
+                        <Label prefHeight="30.0" prefWidth="129.0" text="Src Path:" textAlignment="CENTER">
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets left="20.0" />
+                           </HBox.margin>
+                        </Label>
+                        <TextField fx:id="sourcePathField" prefHeight="30.0" prefWidth="250.0" />
+                        <Button fx:id="chooseSourceButton" mnemonicParsing="false" onAction="#chooseSourceDirectory" prefHeight="26.0" prefWidth="150.0" text="Choose source">
+                           <HBox.margin>
+                              <Insets left="20.0" />
+                           </HBox.margin>
+                        </Button>
+                     </children>
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                     <VBox.margin>
+                        <Insets />
+                     </VBox.margin>
+                  </HBox>
+                  <HBox alignment="CENTER_LEFT" prefHeight="60.0" prefWidth="460.0" spacing="5.0">
+                     <children>
+                        <Label prefHeight="30.0" prefWidth="129.0" text="Dest Path:" textAlignment="CENTER">
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets left="20.0" />
+                           </HBox.margin>
+                        </Label>
+                        <TextField fx:id="destinationPathField" prefHeight="30.0" prefWidth="250.0" />
+                        <Button fx:id="chooseDestinationButton" mnemonicParsing="false" onAction="#chooseDestinationDirectory" prefHeight="26.0" prefWidth="150.0" text="Choose destination">
+                           <HBox.margin>
+                              <Insets left="20.0" />
+                           </HBox.margin>
+                        </Button>
+                     </children>
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                  </HBox>
+                  <HBox alignment="CENTER_LEFT" prefHeight="60.0" prefWidth="460.0" spacing="5.0">
+                     <children>
+                        <Label prefHeight="30.0" prefWidth="129.0" text="Filter ext. :" textAlignment="CENTER">
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets left="20.0" />
+                           </HBox.margin>
+                        </Label>
+                        <ComboBox fx:id="fileFilterComboBox" prefWidth="250.0" />
+                        <CheckBox fx:id="checkFilterExt" mnemonicParsing="false" text="Use">
+                           <HBox.margin>
+                              <Insets left="20.0" />
+                           </HBox.margin>
+                        </CheckBox>
+                     </children>
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                  </HBox>
+                  <HBox alignment="CENTER_LEFT" prefHeight="60.0" prefWidth="460.0" spacing="5.0">
+                     <children>
+                        <Label prefHeight="30.0" prefWidth="166.0" text="Filter last mod. :" textAlignment="CENTER">
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets left="20.0" />
+                           </HBox.margin>
+                        </Label>
+                        <ComboBox fx:id="fileFilterLastModComboBox" prefHeight="26.0" prefWidth="215.0" />
+                        <CheckBox fx:id="checkFilterLastMod" mnemonicParsing="false" text="Use">
+                           <HBox.margin>
+                              <Insets left="20.0" />
+                           </HBox.margin>
+                        </CheckBox>
+                     </children>
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                  </HBox>
+                  <HBox alignment="CENTER_LEFT" prefHeight="60.0" prefWidth="460.0" spacing="5.0">
+                     <children>
+                        <Label fx:id="TimerLabel" prefHeight="30.0" prefWidth="148.0" text="Timer: " textAlignment="CENTER">
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets left="20.0" />
+                           </HBox.margin>
+                        </Label>
+                        <ComboBox fx:id="timerComboBox" prefHeight="26.0" prefWidth="223.0" />
+                        <ProgressBar fx:id="progressBar" prefWidth="200.0" progress="0.0" />
+                     </children>
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                  </HBox>
+                  <HBox alignment="CENTER" prefHeight="93.0" prefWidth="426.0" spacing="5.0">
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                     <children>
+                        <VBox alignment="CENTER" prefHeight="102.0" prefWidth="596.0" spacing="5.0">
+                           <children>
+                              <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="10.0">
+                                 <children>
+                                    <Button fx:id="onSaveSetting" mnemonicParsing="false" onAction="#onSaveSettingClick" text="Save setting" />
+                                    <Button fx:id="clearFieldsButton" mnemonicParsing="false" onAction="#clearFields" text="Clear Fields" />
+                                 </children>
+                              </HBox>
+                              <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="10.0">
+                                 <children>
+                                    <Button fx:id="onBackupButtonClick" mnemonicParsing="false" onAction="#onBackupButtonClick" text="Create Backup" />
+                                    <Button fx:id="onReturnButtonClick" mnemonicParsing="false" onAction="#onReturnButtonClick" text="Return Backup" />
+                                 </children>
+                              </HBox>
+                           </children>
+                           <HBox.margin>
+                              <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                           </HBox.margin>
+                           <padding>
+                              <Insets bottom="1.0" left="1.0" right="1.0" top="1.0" />
+                           </padding>
+                        </VBox>
+                        <VBox alignment="CENTER" prefHeight="102.0" prefWidth="596.0" spacing="5.0">
+                           <children>
+                              <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="10.0">
+                                 <children>
+                                    <Button fx:id="StartTimer1" mnemonicParsing="false" onAction="#onStartTimerClick" text="Start timer" />
+                                    <Button fx:id="StopTimer" mnemonicParsing="false" onAction="#onStopTimerClick" text="Stop timer" />
+                                 </children>
+                              </HBox>
+                           </children>
+                           <padding>
+                              <Insets bottom="1.0" left="1.0" right="1.0" top="1.0" />
+                           </padding>
+                        </VBox>
+                     </children>
+                  </HBox>
+               </children>
+               <BorderPane.margin>
+                  <Insets />
+               </BorderPane.margin>
+            </VBox>
+         </center>
+         <right>
+            <VBox prefHeight="0.0" prefWidth="0.0" BorderPane.alignment="CENTER" />
+         </right>
+         <top>
+            <VBox alignment="BOTTOM_CENTER" prefHeight="30.0" prefWidth="250.0" BorderPane.alignment="CENTER">
+               <children>
+                  <HBox prefHeight="34.0" prefWidth="250.0" spacing="3.0">
+                     <children>
+                        <ChoiceBox fx:id="ChoiceBoxProfile" prefWidth="150.0" />
+                        <Button fx:id="addProfile" mnemonicParsing="false" onAction="#onaddProfileClick" text="+" />
+                        <Button fx:id="deleteProfile" mnemonicParsing="false" onAction="#onDeleteProfile" prefWidth="32.0" text="🗑" textAlignment="CENTER">
+                           <font>
+                              <Font name="System Bold Italic" size="12.0" />
+                           </font>
+                        </Button>
+                        <HBox alignment="CENTER" prefHeight="31.0" prefWidth="286.0">
+                           <children>
+                              <Label fx:id="sliderText" text="SafeScamApp" textAlignment="CENTER">
+                                 <font>
+                                    <Font size="20.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </HBox>
+                        <Button fx:id="SmoleViewBtn" mnemonicParsing="false" onAction="#onSmoleViews" text="Small view" />
+                     </children>
+                     <VBox.margin>
+                        <Insets />
+                     </VBox.margin>
+                  </HBox>
+               </children>
+               <padding>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </padding>
+            </VBox>
+         </top>
+      </BorderPane>
+   </children>
+</AnchorPane>
