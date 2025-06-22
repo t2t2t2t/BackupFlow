@@ -1,4 +1,4 @@
-package org.example.safescamapp.utils;
+package backuplow.utils;
 
 
 public enum SettingKey {

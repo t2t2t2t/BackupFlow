@@ -1,10 +1,9 @@
-package org.example.safescamapp;
+package backuplow;
 
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
-import org.example.safescamapp.utils.Setting;
 
 import java.io.IOException;
 

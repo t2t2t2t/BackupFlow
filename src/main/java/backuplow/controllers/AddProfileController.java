@@ -1,22 +1,17 @@
-package org.example.safescamapp.controllers;
+package backuplow.controllers;
 
-import javafx.beans.value.ChangeListener;
-import javafx.beans.value.ObservableValue;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.Node;
 import javafx.scene.control.CheckBox;
 import javafx.scene.control.Label;
-import javafx.scene.control.Slider;
 import javafx.scene.control.TextField;
-import javafx.scene.paint.Color;
 import javafx.stage.Stage;
-import org.example.safescamapp.utils.Setting;
-import org.example.safescamapp.utils.SettingKey;
+import backuplow.utils.Setting;
+import backuplow.utils.SettingKey;
 
 import java.net.URL;
-import java.nio.file.Paths;
 import java.util.ResourceBundle;
 
 public class AddProfileController implements Initializable {

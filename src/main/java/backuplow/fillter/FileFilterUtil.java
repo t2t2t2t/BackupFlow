@@ -1,10 +1,6 @@
-package org.example.safescamapp.fillter;
-
-import org.example.safescamapp.utils.Setting;
-import org.example.safescamapp.utils.SettingKey;
+package backuplow.fillter;
 
 import java.io.File;
-import java.io.FilenameFilter;
 import java.util.*;
 import java.util.concurrent.TimeUnit;
 import java.util.regex.Matcher;

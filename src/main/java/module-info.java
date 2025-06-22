@@ -8,11 +8,11 @@ module org.example.safescamapp {
 
 
     // Открываем пакеты для FXMLLoader
-    opens org.example.safescamapp to javafx.fxml;
-    opens org.example.safescamapp.controllers to javafx.fxml;
-    opens org.example.safescamapp.fxml to javafx.fxml;  // Если FXML файлы в отдельном пакете
+    opens backuplow to javafx.fxml;
+    opens backuplow.controllers to javafx.fxml;
+    opens backuplow.fxml to javafx.fxml;  // Если FXML файлы в отдельном пакете
 
     // Экспортируем основные пакеты
-    exports org.example.safescamapp;
-    exports org.example.safescamapp.controllers;
+    exports backuplow;
+    exports backuplow.controllers;
 }

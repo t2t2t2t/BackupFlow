@@ -1,4 +1,4 @@
-package org.example.safescamapp.controllers;
+package backuplow.controllers;
 
 import javafx.animation.Animation;
 import javafx.animation.KeyFrame;
@@ -10,18 +10,16 @@ import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.*;
-import javafx.scene.input.MouseEvent;
 import javafx.stage.DirectoryChooser;
 import javafx.stage.Modality;
 import javafx.stage.Stage;
-import org.example.safescamapp.Copy;
-import org.example.safescamapp.fillter.FileFilterUtil;
-import org.example.safescamapp.utils.Setting;
-import org.example.safescamapp.utils.SettingKey;
+import backuplow.Copy;
+import backuplow.fillter.FileFilterUtil;
+import backuplow.utils.Setting;
+import backuplow.utils.SettingKey;
 
 import java.io.File;
 import java.io.IOException;
-import java.util.Collections;
 import java.util.List;
 import java.util.Set;
 import java.util.concurrent.atomic.AtomicInteger;
@@ -270,7 +268,7 @@ public class MainController {
     public void onaddProfileClick(ActionEvent actionEvent) {
         try {
             // Загружаем FXML и получаем контроллер
-            FXMLLoader loader = new FXMLLoader(getClass().getResource("/org/example/safescamapp/fxml/addProfile.fxml"));
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/backuplow/fxml/addProfile.fxml"));
             Parent root = loader.load();
 
             Scene scene = new Scene(root, 500, 100);
@@ -301,7 +299,7 @@ public class MainController {
     public void onSmoleViews(ActionEvent actionEvent) {
         try {
             // Загружаем FXML и получаем контроллер
-            FXMLLoader loader = new FXMLLoader(getClass().getResource("/org/example/safescamapp/fxml/saveTopView.fxml"));
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/backuplow/fxml/saveTopView.fxml"));
             Parent root = loader.load();
 
             Scene scene = new Scene(root, 250, 50);

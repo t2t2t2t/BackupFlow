@@ -1,4 +1,4 @@
-package org.example.safescamapp.profile;
+package backuplow.profile;
 
 public class Profile {
     private int id;

@@ -1,9 +1,6 @@
-package org.example.safescamapp.controllers;
+package backuplow.controllers;
 
 import javafx.event.ActionEvent;
-import org.example.safescamapp.Copy;
-
-import java.io.IOException;
 
 public class SmallViewController {
 
